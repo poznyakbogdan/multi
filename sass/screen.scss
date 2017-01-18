@@ -1,0 +1,394 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+ @font-face {
+    font-family: Open_Sans_Bold; 
+    src: url(../fonts/Open_Sans/OpenSans-Bold.ttf); 
+}
+ @font-face {
+    font-family: Open_Sans_ExtraBold; 
+    src: url(../fonts/Open_Sans/OpenSans-ExtraBold.ttf); 
+}
+
+ @font-face {
+    font-family: Open_Sans_Italic; 
+    src: url(../fonts/Open_Sans/OpenSans-Italic.ttf); 
+}
+ @font-face {
+    font-family: Open_Sans_Regular; 
+    src: url(../fonts/Open_Sans/OpenSans-Regular.ttf); 
+}
+ @font-face {
+    font-family: Lato_Bold; 
+    src: url(../fonts/Lato/Lato-Bold.ttf); 
+}
+ @font-face {
+    font-family: Lato_Regular; 
+    src: url(../fonts/Lato/Lato-Regular.ttf); 
+}
+body{
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+	text-align: center;
+}
+$Blue: #709dca;
+$color-white: #fff;
+.title{
+	font-family: Open_Sans_Bold;
+	color: #fff;
+	text-align: center;
+}
+#page-layer{
+	width: 100%;
+	height: auto;
+	background: red;
+}
+.common-prop-of-sections{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background: transparent;
+	width: 100%;
+	max-width: 2500px;
+	margin: 0 auto;
+}
+.header{
+	background: url('../images/background.png') 100% 100% no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 560px;
+	box-shadow: 0px 0px 0px 300px rgba(0, 0, 0, 0.5) inset;
+}
+.navbar-nav{
+	float: right;
+}
+.header-title{
+	font-size: 2em;
+}
+
+.header-slider{
+	position: relative;
+	height: inherit;
+}
+.header-slider-slide{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: flex-start;
+}
+.slide-2, .slide-3{
+	display: none;
+}
+.header-slider-button{
+	width: 2em;
+	height: 2em;
+	border: 2px solid #709dca;
+	background: transparent;
+	color: #ffc155;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	margin-top: -1em;
+}
+.rightButton{
+	right: 0%; 
+}
+.leftButton{
+	left: 0%;
+}
+
+.header-slider-text{
+	color: #fff;
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+	font-size: 1.1em;
+}
+.slide-1-text{
+	letter-spacing: 1.5px;
+}
+.header-slider-slide-content{
+	margin-top: 100px;
+}
+.showButton{
+	width: 200px;
+	height: 60px;
+	border: 0px;
+	position: static;
+	border-radius: 7px;
+	background: $Blue;
+	top: initial;
+	font-family: Open_Sans_Bold, Arial, sans-serif;
+	color: $color-white;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	margin-top: 60px;
+}
+.container{
+	height: 100%;
+}
+:root{
+	--header-heigth: calc(560 - 40);
+}
+.header-container{
+	height: 508px;
+}
+
+.navbar{
+	margin-bottom: 0px;
+}
+.header-slider-dotsContainer{
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	margin-left: -52px;
+
+}
+.header-slider-dots{
+	width: 25px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 25px;
+	box-sizing: border-box;
+	border: 2px solid $color-white;
+	align-items: center;
+	margin: 0 5px;
+	background: transparent;
+	border-radius: 50%;
+	
+}
+.header-slider-dots:before {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: $color-white;
+	display: none;
+}
+.header-slider-dots:hover{
+	cursor: pointer;
+}
+.header-slider-dots:hover::before{
+	display: flex;
+}
+.service-section{
+	background-color: $color-white;
+	padding: 50px 0;
+}
+.service-grid-info-part{
+	// display: block;
+	text-align: left;
+	margin-top: 3em;
+}
+.service-grid-info-part-logo{
+	background: url("../images/Tools.png") no-repeat;
+	width: 2em;
+	height: 2em;
+	float: left;
+	margin-right: 25px;
+}
+.service-grid-info-header{
+	font-family: Lato_Bold, Arial, sans-serif;
+	text-transform: uppercase;
+	color: #394b50;
+	font-size: 1em;
+}	
+.service-grid-info-text{
+	margin-top: 1.5em;
+	margin-left: 55px;
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+	font-size: .9em;
+	color: #7b7b7b;
+	line-height: 20px;
+}
+.service-title{
+	font-family: Open_Sans_Bold, Arial, sans-serif;
+	text-transform: uppercase;
+	color: $Blue;
+	font-size: 1.5em;
+}
+
+.service-undertitle{
+	color: #46575c;
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+	font-size: 1em;
+	margin-top: 2em;
+}
+.about-us{
+	overflow: hidden;
+	height: 500px;
+}
+.about-us .container{
+	width: 1340px;	
+}
+.about-us--slider--image-part-images.image2{
+	display: none;
+}
+.about-us--slider--image-part-images.image1{
+	background: url('../images/who_slider/slide1.png') 100% no-repeat;
+	height: 500px;
+}
+.about-us--slider--content-part, .about-us--slider--image-part{
+	padding: 0;
+}
+.about-us--slider--content-part{
+	background-color: #ffc155;
+	text-align: left;
+    padding: 60px 80px 40px;
+}
+.about-us--slider--content-part--header{
+	font-family: Open_Sans_Bold, Arial, sans-serif;
+	color: $color-white;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+.about-us--slider--content-part--text{
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+	font-size: .8em;
+	color: $color-white;
+	line-height: 22px;
+	margin-top: 2em;
+}
+.about-us--slider--content-part--text--button{
+	width: 200px;
+	height: 50px;
+	border-radius: 3px;
+	border: 2px solid rgba(0, 0, 0, .1);
+	background-color: rgba(0, 0, 0, .06);
+	color: $color-white;
+	font-family: Lato_Regular, Arial, sans-serif;
+	text-transform: uppercase;
+	margin-top: 4em;
+}
+.portfolio{
+	background-color: $color-white;
+}
+.portfolio--container{
+	width: 100%;
+	max-width: 1350px;
+	padding-top: 80px;
+	margin: 0 auto;
+}
+.galery .galery--slide-container{
+	height: auto;
+	background-color: blue;
+	//border: 1px solid black;
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+}
+.portfolio--container .container{
+	width: 100%;
+}
+.portfolio--navigation{
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	margin: 20px auto;
+	justify-content: space-between;
+}
+.portfolio--head-text{
+	width: 80%;
+	margin: 0 auto;
+	color: #384d5c;
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+}
+.portfolio--header{
+	color: $Blue;
+	font-family: Open_Sans_ExtraBold, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+.portfolio--under-header-image{
+	width: 100%;
+	height: 20px;
+}
+.portfolio--navigation--links>a{
+	padding: 3px 16px;
+	background-color: transparent;
+	border-radius: 5px;
+	text-decoration: none;
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+	color: #062033;
+}
+.portfolio--navigation--links>a:hover{
+	background-color: $Blue;
+	color: $color-white;
+}
+.galery--galery-slide{
+	height: 283px;
+	box-sizing: border-box;
+	background-size: inherit;
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	margin-left: -1px;
+	// overflow: hidden;
+	// position: relative;
+}
+.galery--galery-slide.slide1{
+	background-image: url(../images/portfolio/image1.png);
+}
+.galery--galery-slide.slide2{
+	background-image: url(../images/portfolio/image2.png);	
+}
+.galery--galery-slide.slide3{
+	background-image: url(../images/portfolio/image3.png);
+}
+.galery--galery-slide.slide4{
+	background-image: url(../images/portfolio/image4.png);
+}
+.galery--galery-slide.slide5{
+	background-image: url(../images/portfolio/image5.png);
+}
+.galery--galery-slide.slide6{
+	background-image: url(../images/portfolio/image6.png);
+}
+.galery--galery-slide.slide7{
+	background-image: url(../images/portfolio/image7.png);
+}
+.galery--galery-slide.slide8{
+	background-image: url(../images/portfolio/stork.png);
+}
+.galery--galery-slide--effect{
+	width: 100%;
+	height: 283px;
+	background: rgba(255, 193, 85, .7);
+	position: absolute;
+	top: 283px;
+	left: 0px;
+	transition: .4s all ease;
+}
+.galery--galery-slide:hover ~ .galery--galery-slide--effect, .galery--galery-slide--effect:hover{
+	top: 0px;
+	cursor: pointer;
+}
+.galery--galery-slide--effect--img{
+	display: block;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    padding: 10px 3px;
+	border: 2px solid $color-white;
+	margin: 90px auto 30px;
+}
+.galery--galery-slide--effect>strong{
+	display: block;
+	color: $color-white;
+	font-family: Open_Sans_Bold, Arial, sans-serif;
+	margin-bottom: 10px;
+}
+.galery--galery-slide--effect>span{
+	display: block;
+	color: $color-white;
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+	font-size: .9em;
+}
