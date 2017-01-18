@@ -132,9 +132,6 @@ $color-white: #fff;
 .container{
 	height: 100%;
 }
-:root{
-	--header-heigth: calc(560 - 40);
-}
 .header-container{
 	height: 508px;
 }
@@ -295,6 +292,7 @@ $color-white: #fff;
 	flex-direction: row;
 	margin: 20px auto;
 	justify-content: space-between;
+	overflow: hidden;
 }
 .portfolio--head-text{
 	width: 80%;
