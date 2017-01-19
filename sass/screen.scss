@@ -278,10 +278,10 @@ $color-white: #fff;
 .galery .galery--slide-container{
 	height: auto;
 	background-color: blue;
-	//border: 1px solid black;
 	padding: 0px;
 	overflow: hidden;
 	position: relative;
+	margin-top: -1px;
 }
 .portfolio--container .container{
 	width: 100%;
@@ -292,7 +292,7 @@ $color-white: #fff;
 	flex-direction: row;
 	margin: 20px auto;
 	justify-content: space-between;
-	overflow: hidden;
+	flex-wrap: wrap;
 }
 .portfolio--head-text{
 	width: 80%;
@@ -325,12 +325,11 @@ $color-white: #fff;
 .galery--galery-slide{
 	height: 283px;
 	box-sizing: border-box;
-	background-size: inherit;
+	background-size: cover;
 	background-position: 0% 0%;
 	background-repeat: no-repeat;
 	margin-left: -1px;
-	// overflow: hidden;
-	// position: relative;
+	// margin-top: -1px;
 }
 .galery--galery-slide.slide1{
 	background-image: url(../images/portfolio/image1.png);
@@ -389,4 +388,114 @@ $color-white: #fff;
 	color: $color-white;
 	font-family: Open_Sans_Regular, Arial, sans-serif;
 	font-size: .9em;
+}
+.testimonials{
+	background: $color-white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.testimonials--line{
+	display: block;
+    width: 220px;
+    height: 1px;
+    background: #ffc155;
+    margin: 30px auto -12px;
+}
+.testimonials--content{
+	margin-top: 3em;
+}
+.testimonials--undertitle-icon{
+	background: white;
+    display: inline-block;
+    padding: 0 5px;
+}    
+.testimonials-header{
+	@extend .portfolio--header;
+}
+.testimonials--content--comments{
+	text-align: left;
+}
+.testimonials--content--comments--text-form{
+	background: #f6f3f3;
+	height: auto;
+	padding: 30px;
+	width: 90%;
+	text-align: left;
+	font-family:  Open_Sans_Italic, sans-serif;
+	font-size: .8em;
+	line-height: 20px;
+	margin-bottom: 15px;
+	position: relative;
+}
+.testimonials--content--comments--text-form::after {
+	content: "";
+    width: 0;
+    height: 0;
+    border-top: 18px solid #f6f3f3;
+    border-right: 22px solid transparent;
+    position: absolute;
+    bottom: -18px;
+    left: 50px;
+}
+.testimonials--content--comments--signature{
+	color: #000;
+	font-family: Open_Sans_Bold, Arial, sans-serif;
+	font-size: 0.9em;
+	vertical-align: super;
+	display: inline-block;
+	margin-left: 10px;
+}
+.testimonials--content--comments--signature~span{
+	color: #000;
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+	font-size: 0.9em;
+	vertical-align: super;
+}
+.testimonials--content--control{
+	display: flex;
+	justify-content: center;
+	margin-top: 2em;
+}
+.testimonials--content--control li{
+	width: 20px;
+	height: 20px;
+	background: #d4d3d4;
+	border: 2px solid white;
+	border-radius: 50%;
+	margin: 0 3px;
+}
+.testimonials--content--control li:hover {
+	border-color: $Blue;
+	background: transparent;
+	cursor: pointer;
+}
+.footer{
+	text-align: left;
+	padding: 50px 0;
+	background: #273a43;
+	color: #c4c4c4;
+	font-family: Lato_Regular, Arial, sans-serif;
+	font-size: .8em;
+	line-height: 17px;
+}
+.footer-header{
+	color: $color-white;
+	font-family: Open_Sans_Regular, Arial, sans-serif;
+	font-size: 1.5em;
+	display: inline-block;
+	margin-bottom: 1em;
+}
+.footer--contact-column--contact-info li{
+	color: $color-white;
+	margin: 5px 0;
+	font-size: 1.1em;
+}
+.footer--contact-column--contact-info span{
+	color: $Blue;
+	font-size: 1.4em;
+	display: inline-block;
+	margin-right: 1em;
+}
+.footer--contact-column--contact-info{
+	margin-top: 1em;
 }

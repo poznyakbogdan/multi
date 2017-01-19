@@ -420,6 +420,7 @@ body {
   padding: 0px;
   overflow: hidden;
   position: relative;
+  margin-top: -1px;
 }
 
 /* line 286, ../sass/screen.scss */
@@ -434,7 +435,7 @@ body {
   flex-direction: row;
   margin: 20px auto;
   justify-content: space-between;
-  overflow: hidden;
+  flex-wrap: wrap;
 }
 
 /* line 297, ../sass/screen.scss */
@@ -446,7 +447,7 @@ body {
 }
 
 /* line 303, ../sass/screen.scss */
-.portfolio--header {
+.portfolio--header, .testimonials-header {
   color: #709dca;
   font-family: Open_Sans_ExtraBold, Arial, sans-serif;
   text-transform: uppercase;
@@ -479,53 +480,53 @@ body {
 .galery--galery-slide {
   height: 283px;
   box-sizing: border-box;
-  background-size: inherit;
+  background-size: cover;
   background-position: 0% 0%;
   background-repeat: no-repeat;
   margin-left: -1px;
 }
 
-/* line 335, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 .galery--galery-slide.slide1 {
   background-image: url(../images/portfolio/image1.png);
 }
 
-/* line 338, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 .galery--galery-slide.slide2 {
   background-image: url(../images/portfolio/image2.png);
 }
 
-/* line 341, ../sass/screen.scss */
+/* line 340, ../sass/screen.scss */
 .galery--galery-slide.slide3 {
   background-image: url(../images/portfolio/image3.png);
 }
 
-/* line 344, ../sass/screen.scss */
+/* line 343, ../sass/screen.scss */
 .galery--galery-slide.slide4 {
   background-image: url(../images/portfolio/image4.png);
 }
 
-/* line 347, ../sass/screen.scss */
+/* line 346, ../sass/screen.scss */
 .galery--galery-slide.slide5 {
   background-image: url(../images/portfolio/image5.png);
 }
 
-/* line 350, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 .galery--galery-slide.slide6 {
   background-image: url(../images/portfolio/image6.png);
 }
 
-/* line 353, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 .galery--galery-slide.slide7 {
   background-image: url(../images/portfolio/image7.png);
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 .galery--galery-slide.slide8 {
   background-image: url(../images/portfolio/stork.png);
 }
 
-/* line 359, ../sass/screen.scss */
+/* line 358, ../sass/screen.scss */
 .galery--galery-slide--effect {
   width: 100%;
   height: 283px;
@@ -536,13 +537,13 @@ body {
   transition: .4s all ease;
 }
 
-/* line 368, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 .galery--galery-slide:hover ~ .galery--galery-slide--effect, .galery--galery-slide--effect:hover {
   top: 0px;
   cursor: pointer;
 }
 
-/* line 372, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 .galery--galery-slide--effect--img {
   display: block;
   border-radius: 50%;
@@ -553,7 +554,7 @@ body {
   margin: 90px auto 30px;
 }
 
-/* line 381, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 .galery--galery-slide--effect > strong {
   display: block;
   color: #fff;
@@ -561,10 +562,151 @@ body {
   margin-bottom: 10px;
 }
 
-/* line 387, ../sass/screen.scss */
+/* line 386, ../sass/screen.scss */
 .galery--galery-slide--effect > span {
   display: block;
   color: #fff;
   font-family: Open_Sans_Regular, Arial, sans-serif;
   font-size: .9em;
+}
+
+/* line 392, ../sass/screen.scss */
+.testimonials {
+  background: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* line 397, ../sass/screen.scss */
+.testimonials--line {
+  display: block;
+  width: 220px;
+  height: 1px;
+  background: #ffc155;
+  margin: 30px auto -12px;
+}
+
+/* line 404, ../sass/screen.scss */
+.testimonials--content {
+  margin-top: 3em;
+}
+
+/* line 407, ../sass/screen.scss */
+.testimonials--undertitle-icon {
+  background: white;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+/* line 415, ../sass/screen.scss */
+.testimonials--content--comments {
+  text-align: left;
+}
+
+/* line 418, ../sass/screen.scss */
+.testimonials--content--comments--text-form {
+  background: #f6f3f3;
+  height: auto;
+  padding: 30px;
+  width: 90%;
+  text-align: left;
+  font-family: Open_Sans_Italic, sans-serif;
+  font-size: .8em;
+  line-height: 20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* line 430, ../sass/screen.scss */
+.testimonials--content--comments--text-form::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 18px solid #f6f3f3;
+  border-right: 22px solid transparent;
+  position: absolute;
+  bottom: -18px;
+  left: 50px;
+}
+
+/* line 440, ../sass/screen.scss */
+.testimonials--content--comments--signature {
+  color: #000;
+  font-family: Open_Sans_Bold, Arial, sans-serif;
+  font-size: 0.9em;
+  vertical-align: super;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* line 448, ../sass/screen.scss */
+.testimonials--content--comments--signature ~ span {
+  color: #000;
+  font-family: Open_Sans_Regular, Arial, sans-serif;
+  font-size: 0.9em;
+  vertical-align: super;
+}
+
+/* line 454, ../sass/screen.scss */
+.testimonials--content--control {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+/* line 459, ../sass/screen.scss */
+.testimonials--content--control li {
+  width: 20px;
+  height: 20px;
+  background: #d4d3d4;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+/* line 467, ../sass/screen.scss */
+.testimonials--content--control li:hover {
+  border-color: #709dca;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* line 472, ../sass/screen.scss */
+.footer {
+  text-align: left;
+  padding: 50px 0;
+  background: #273a43;
+  color: #c4c4c4;
+  font-family: Lato_Regular, Arial, sans-serif;
+  font-size: .8em;
+  line-height: 17px;
+}
+
+/* line 481, ../sass/screen.scss */
+.footer-header {
+  color: #fff;
+  font-family: Open_Sans_Regular, Arial, sans-serif;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+/* line 488, ../sass/screen.scss */
+.footer--contact-column--contact-info li {
+  color: #fff;
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+/* line 493, ../sass/screen.scss */
+.footer--contact-column--contact-info span {
+  color: #709dca;
+  font-size: 1.4em;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+/* line 499, ../sass/screen.scss */
+.footer--contact-column--contact-info {
+  margin-top: 1em;
 }
