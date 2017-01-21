@@ -555,6 +555,34 @@ i{
 .footer-row>div{
 	margin-bottom: 2em;
 }
+.footer--bottom-part{
+	text-align: center;
+	background: #172227;
+	color: $color-white;
+	font-size: .8em;
+}
+.footer--bottom-part--icon-bg{
+	width: 2em;
+	height: 2em;
+	float: left;
+	background: #2c3b42;
+	margin-right: 5px;
+	i{
+		line-height: 25px;
+		color: $color-white;
+	}
+}
+.footer--bottom-part--icon-bg:hover{
+	background: #71b6d5;
+	cursor:pointer;
+}
+.footer--bottom-part--row>p, .footer--bottom-part--row>div{
+	padding: 2em 0;
+}
+.footer--bottom-part--icons{
+	display: inline-flex;
+    justify-content: flex-end;
+}
 @media (max-width: 768px) {
 	.testimonials--line{
 		width: 100%;
