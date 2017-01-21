@@ -221,21 +221,31 @@ $color-white: #fff;
 	margin-top: 2em;
 }
 .about-us{
-	overflow: hidden;
-	height: 500px;
+	// overflow: hidden;
+	// height: 500px;
+	height: auto;
 }
 .about-us .container{
-	width: 1340px;	
+	width: 100%;
+	max-width: 2500px;	
+}
+.about-us--slider-container{
+	display: flex;
 }
 .about-us--slider--image-part-images.image2{
 	display: none;
 }
 .about-us--slider--image-part-images.image1{
-	background: url('../images/who_slider/slide1.png') 100% no-repeat;
-	height: 500px;
+	background-image: url(../images/who_slider/slide1.png);
+}
+.about-us--slider--image-part-images{
+	height: 100%;
+	background-size: cover;		
+	background-repeat: no-repeat;
 }
 .about-us--slider--content-part, .about-us--slider--image-part{
 	padding: 0;
+	width: 50%;
 }
 .about-us--slider--content-part{
 	background-color: #ffc155;
@@ -498,4 +508,76 @@ $color-white: #fff;
 }
 .footer--contact-column--contact-info{
 	margin-top: 1em;
+}
+i{
+	display: block;
+	float: left;
+	font-size: 1.3em;
+	color: $Blue;
+}
+.footer--tweets-column--text{
+	padding-left: 2em;
+}
+.footer--tweets-column-tweet>span{
+	display: inline-block;
+	margin-left: 2em;
+	margin-top: .5em;
+	color: $Blue;
+}
+.footer--tweets-column-tweet{
+	margin-bottom: 1em;
+}
+.footer--form-column--text-input{
+	display: inline-block;
+	width: 75%;
+	border: 0px;
+	height: 2.5em;
+	padding: 3px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	background: #172227;
+}
+.footer--form-column--button{
+	width: 25%;
+	border: 0px;
+	height: 2.5em;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;		
+	background: #71b6d5;
+	color: $color-white;
+}
+.footer--form-column--form-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 1em;
+}
+.footer-row>div{
+	margin-bottom: 2em;
+}
+@media (max-width: 768px) {
+	.testimonials--line{
+		width: 100%;
+	}
+	// 300px
+	.about-us--slider--image-part-images{
+		height: 300px;
+	}	
+}
+@media screen and (max-width: 1280px) {
+	.about-us{
+		overflow: visible;
+		height: auto;
+	}
+}
+@media screen and (max-width: 900px){
+	.about-us--slider-container{
+		flex-direction: column;
+	}
+	.about-us--slider--image-part-images{
+		height: 400px;
+	}
+	.about-us--slider--content-part, .about-us--slider--image-part{
+		width: 100%;
+	}
 }

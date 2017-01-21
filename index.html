@@ -6,6 +6,7 @@
 	<title>	Multipurpose project </title>
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/screen.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello.css">
 	<script type="text/javascript" src="vendor/jquery.js" defer></script>
 	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js" defer></script>
 	<script type="text/javascript" src="js/main.js" defer></script>
@@ -175,7 +176,7 @@
 		<section class="common-prop-of-sections about-us">
 			<div class="container about-us--slider">
 				<div class="row about-us--slider-container">	
-					<div class="about-us--slider--image-part col-lg-6">
+					<div class="about-us--slider--image-part">
 						<div class="about-us--slider--image-part-images image1">
 							
 						</div>
@@ -183,7 +184,7 @@
 							
 						</div>
 					</div>
-					<div class="about-us--slider--content-part col-lg-6">
+					<div class="about-us--slider--content-part">
 						<strong class="about-us--slider--content-part--header">
 							Who we are
 						</strong>
@@ -400,7 +401,7 @@
 		<footer class="footer common-prop-of-sections">
 			<div class="container footer-container">
 				<div class="row footer-row">
-					<div class="footer--logo-column col-lg-3 col-sm-6 col-xs-12">
+					<div class="footer--logo-column col-lg-3 col-sкm-6 col-xs-12">
 						<strong class="footer-header">
 							Business Name
 						</strong>
@@ -425,18 +426,22 @@
 						<strong class="footer-header">
 							Latest Tweets
 						</strong>
-						<div>
-							<img src="" alt="">
-							<p>
+						<div class="footer--tweets-column-tweet">
+							<i class="icon-twitter">
+								
+							</i>
+							<p class="footer--tweets-column--text">
 								Curabitur felis nibh, lacinia non rhoncus vel, lobortis et lorem. Class aptent taciti sociosqu ad litora torquent per conubia 
 							</p>
 							<span>
 								5 Hours  Ago
 							</span>
 						</div>
-						<div>
-							<img src="" alt="">
-							<p>
+						<div class="footer--tweets-column-tweet">
+							<i class="icon-twitter">
+								
+							</i>
+							<p class="footer--tweets-column--text">
 								Curabitur felis nibh, lacinia non rhoncus vel, lobortis et lorem. Class aptent taciti sociosqu ad litora torquent per conubia 
 							</p>
 							<span>
@@ -451,10 +456,12 @@
 						<p>
 							Type your email address below and recive our daily news letter for free
 						</p>
-						<input type="text">
-						<button>
-							Submit
-						</button>
+						<form method="POST" class="footer--form-column--form-container">	
+							<input type="text" class="footer--form-column--text-input">
+							<button class="footer--form-column--button">
+								Submit
+							</button>
+						</form>	
 					</div>
 				</div>
 			</div>
