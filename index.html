@@ -5,16 +5,22 @@
 	<meta name="viewport" content="width=device-width">
 	<title>	Multipurpose project </title>
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/screen.css">
 	<link rel="stylesheet" type="text/css" href="css/fontello.css">
 	<script type="text/javascript" src="vendor/jquery.js" defer></script>
 	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js" defer></script>
+	<script type="text/javascript" src="vendor/slick.js" defer></script>
 	<script type="text/javascript" src="js/main.js" defer></script>
 </head>
 <body>
 	<div id="page-layer">
 		<header class="header common-prop-of-sections">
-			<nav class="navbar navbar-default">
+			<video class="video-background" autoplay="autoplay" loop="loop">
+		    <source src="video/deposits.mp4" type="video/mp4"></source>
+		    <source src="video/deposits.webm" type="video/webm"></source>
+		</video>
+			<nav class="navbar navbar-default navbar-transparent">
 			  <div class="container-fluid">
 			    <div class="navbar-header">
 			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -27,22 +33,11 @@
 			    </div>
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav">
-			        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-			        <li><a href="#">Link</a></li>
-			        <li class="dropdown">
-			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-			          <ul class="dropdown-menu">
-			            <li><a href="#">Action</a></li>
-			            <li><a href="#">Another action</a></li>
-			            <li><a href="#">Something else here</a></li>
-			            <li role="separator" class="divider"></li>
-			            <li><a href="#">Separated link</a></li>
-			            <li role="separator" class="divider"></li>
-			            <li><a href="#">One more separated link</a></li>
-			          </ul>
-			        </li>
+			      	<li><a href="#" class="nav-link">Link</a></li>
+			        <li><a href="#" class="nav-link">Link</a></li>
+			        <li><a href="#" class="nav-link">Link</a></li>
+			        <li><a href="#" class="nav-link">Link</a></li>
 			      </ul>
-			     
 			    </div>
 			  </div>
 			</nav>
@@ -78,18 +73,8 @@
 									Donec posuere augue venenatis,
 							</p>
 						</div>	
-						<button class="header-slider-button leftButton">
-							<
-						</button>
-						<button class="header-slider-button rightButton">
-							>
-						</button>	
-						<ul class="header-slider-dotsContainer">
-									<li class="header-slider-dots dot1"></li>
-									<li class="header-slider-dots dot2"></li>
-									<li class="header-slider-dots dot3"></li>
-						</ul>		
 					</div>
+					<div class="slider-dots"></div>
 				</div>
 			</div>
 		</header>

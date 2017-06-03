@@ -44,7 +44,6 @@ $color-white: #fff;
 #page-layer{
 	width: 100%;
 	height: auto;
-	background: red;
 }
 .common-prop-of-sections{
 	position: relative;
@@ -56,14 +55,80 @@ $color-white: #fff;
 	margin: 0 auto;
 }
 .header{
-	background: url('../images/background.png') 100% 100% no-repeat;
+	// background: url('../images/background.png') 100% 100% no-repeat;
 	background-size: cover;
 	width: 100%;
 	height: 560px;
 	box-shadow: 0px 0px 0px 300px rgba(0, 0, 0, 0.5) inset;
 }
+.video-background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+.navbar-transparent{
+	background: rgba(0, 0, 0, .3) !important;
+	border: 0px;
+}
 .navbar-nav{
 	float: right;
+	li{
+		box-sizing: border-box !important;
+		overflow: hidden;
+	}
+	li>a{
+		position: relative;
+		background: transparent !important;
+		color: white !important;
+		padding: 15px 30px !important; 
+		box-sizing: border-box !important;
+		border-bottom: 2px solid transparent !important;
+	}
+	a:before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: #709dca;
+		position: absolute;
+		top: 100%;
+		left: -100%;
+		transition-duration: .3s;
+		transition-property: all;
+		transition-timing-function: ease;
+	}
+}
+.nav-link:hover{
+	background: rgba(255, 255, 255, .15) !important;
+}
+.nav-link:hover::before{
+	left: 0px;
+}
+.slick-dots{
+	display: inline-flex;
+	li{
+		margin: 0px 5px;
+		button{
+			width: 1em;
+			height: 1em;
+			border-radius: 50%;
+			background: #fff;
+			border: 0px;
+		}
+	}
+	.slick-active{
+		button{
+			background: #ffc155;
+		}
+	}
+}
+.slider-dots{
+	margin-top: 1em;
 }
 .header-title{
 	font-size: 2em;
@@ -71,7 +136,6 @@ $color-white: #fff;
 
 .header-slider{
 	position: relative;
-	height: inherit;
 }
 .header-slider-slide{
 	position: relative;
@@ -608,4 +672,46 @@ i{
 	.about-us--slider--content-part, .about-us--slider--image-part{
 		width: 100%;
 	}
+}
+@media (min-aspect-ratio: 16/9) {
+    .video-background {
+        height: 300%;
+        top: -100%;
+    }
+}
+ 
+@media (max-aspect-ratio: 16/9) {
+    .video-background {
+        width: 300%;
+        left: -100%;
+    }
+}
+ 
+@supports (object-fit: cover) {
+    .video-background {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.arrows-container{
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+}
+.arrow-btn{
+	width: 3em;
+	height: 3em;
+	background: transparent;
+	color: #ffc155;
+	border-radius: 50%;
+	border: 2px solid #fff;
+}
+.prev-arrow{
+	left: 0px; 
+}
+.next-arrow{
+	right: 0px; 
 }

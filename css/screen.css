@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -108,10 +108,9 @@ body {
 #page-layer {
   width: 100%;
   height: auto;
-  background: red;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 .common-prop-of-sections {
   position: relative;
   left: 0px;
@@ -122,32 +121,112 @@ body {
   margin: 0 auto;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 .header {
-  background: url("../images/background.png") 100% 100% no-repeat;
   background-size: cover;
   width: 100%;
   height: 560px;
   box-shadow: 0px 0px 0px 300px rgba(0, 0, 0, 0.5) inset;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* line 74, ../sass/screen.scss */
+.navbar-transparent {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 0px;
+}
+
+/* line 78, ../sass/screen.scss */
 .navbar-nav {
   float: right;
 }
+/* line 80, ../sass/screen.scss */
+.navbar-nav li {
+  box-sizing: border-box !important;
+  overflow: hidden;
+}
+/* line 84, ../sass/screen.scss */
+.navbar-nav li > a {
+  position: relative;
+  background: transparent !important;
+  color: white !important;
+  padding: 15px 30px !important;
+  box-sizing: border-box !important;
+  border-bottom: 2px solid transparent !important;
+}
+/* line 92, ../sass/screen.scss */
+.navbar-nav a:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #709dca;
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  transition-duration: .3s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
 
-/* line 68, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* line 109, ../sass/screen.scss */
+.nav-link:hover::before {
+  left: 0px;
+}
+
+/* line 112, ../sass/screen.scss */
+.slick-dots {
+  display: inline-flex;
+}
+/* line 114, ../sass/screen.scss */
+.slick-dots li {
+  margin: 0px 5px;
+}
+/* line 116, ../sass/screen.scss */
+.slick-dots li button {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: #fff;
+  border: 0px;
+}
+/* line 125, ../sass/screen.scss */
+.slick-dots .slick-active button {
+  background: #ffc155;
+}
+
+/* line 130, ../sass/screen.scss */
+.slider-dots {
+  margin-top: 1em;
+}
+
+/* line 133, ../sass/screen.scss */
 .header-title {
   font-size: 2em;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .header-slider {
   position: relative;
-  height: inherit;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .header-slider-slide {
   position: relative;
   width: 100%;
@@ -159,12 +238,12 @@ body {
   align-content: flex-start;
 }
 
-/* line 86, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .slide-2, .slide-3 {
   display: none;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .header-slider-button {
   width: 2em;
   height: 2em;
@@ -177,34 +256,34 @@ body {
   margin-top: -1em;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .rightButton {
   right: 0%;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .leftButton {
   left: 0%;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .header-slider-text {
   color: #fff;
   font-family: Open_Sans_Regular, Arial, sans-serif;
   font-size: 1.1em;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .slide-1-text {
   letter-spacing: 1.5px;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .header-slider-slide-content {
   margin-top: 100px;
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .showButton {
   width: 200px;
   height: 60px;
@@ -220,22 +299,22 @@ body {
   margin-top: 60px;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .container {
   height: 100%;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 .header-container {
   height: 508px;
 }
 
-/* line 139, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .navbar {
   margin-bottom: 0px;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .header-slider-dotsContainer {
   display: flex;
   flex-direction: row;
@@ -245,7 +324,7 @@ body {
   margin-left: -52px;
 }
 
-/* line 151, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 .header-slider-dots {
   width: 25px;
   display: flex;
@@ -260,7 +339,7 @@ body {
   border-radius: 50%;
 }
 
-/* line 165, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .header-slider-dots:before {
   content: "";
   display: block;
@@ -271,29 +350,29 @@ body {
   display: none;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 .header-slider-dots:hover {
   cursor: pointer;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .header-slider-dots:hover::before {
   display: flex;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 .service-section {
   background-color: #fff;
   padding: 50px 0;
 }
 
-/* line 184, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 .service-grid-info-part {
   text-align: left;
   margin-top: 3em;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .service-grid-info-part-logo {
   background: url("../images/Tools.png") no-repeat;
   width: 2em;
@@ -302,7 +381,7 @@ body {
   margin-right: 25px;
 }
 
-/* line 196, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .service-grid-info-header {
   font-family: Lato_Bold, Arial, sans-serif;
   text-transform: uppercase;
@@ -310,7 +389,7 @@ body {
   font-size: 1em;
 }
 
-/* line 202, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .service-grid-info-text {
   margin-top: 1.5em;
   margin-left: 55px;
@@ -320,7 +399,7 @@ body {
   line-height: 20px;
 }
 
-/* line 210, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 .service-title {
   font-family: Open_Sans_Bold, Arial, sans-serif;
   text-transform: uppercase;
@@ -328,7 +407,7 @@ body {
   font-size: 1.5em;
 }
 
-/* line 217, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 .service-undertitle {
   color: #46575c;
   font-family: Open_Sans_Regular, Arial, sans-serif;
@@ -336,53 +415,53 @@ body {
   margin-top: 2em;
 }
 
-/* line 223, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 .about-us {
   height: auto;
 }
 
-/* line 228, ../sass/screen.scss */
+/* line 292, ../sass/screen.scss */
 .about-us .container {
   width: 100%;
   max-width: 2500px;
 }
 
-/* line 232, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .about-us--slider-container {
   display: flex;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .about-us--slider--image-part-images.image2 {
   display: none;
 }
 
-/* line 238, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .about-us--slider--image-part-images.image1 {
   background-image: url(../images/who_slider/slide1.png);
 }
 
-/* line 241, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 .about-us--slider--image-part-images {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* line 246, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 .about-us--slider--content-part, .about-us--slider--image-part {
   padding: 0;
   width: 50%;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 .about-us--slider--content-part {
   background-color: #ffc155;
   text-align: left;
   padding: 60px 80px 40px;
 }
 
-/* line 255, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 .about-us--slider--content-part--header {
   font-family: Open_Sans_Bold, Arial, sans-serif;
   color: #fff;
@@ -390,7 +469,7 @@ body {
   font-size: 1.2em;
 }
 
-/* line 261, ../sass/screen.scss */
+/* line 325, ../sass/screen.scss */
 .about-us--slider--content-part--text {
   font-family: Open_Sans_Regular, Arial, sans-serif;
   font-size: .8em;
@@ -399,7 +478,7 @@ body {
   margin-top: 2em;
 }
 
-/* line 268, ../sass/screen.scss */
+/* line 332, ../sass/screen.scss */
 .about-us--slider--content-part--text--button {
   width: 200px;
   height: 50px;
@@ -412,12 +491,12 @@ body {
   margin-top: 4em;
 }
 
-/* line 279, ../sass/screen.scss */
+/* line 343, ../sass/screen.scss */
 .portfolio {
   background-color: #fff;
 }
 
-/* line 282, ../sass/screen.scss */
+/* line 346, ../sass/screen.scss */
 .portfolio--container {
   width: 100%;
   max-width: 1350px;
@@ -425,7 +504,7 @@ body {
   margin: 0 auto;
 }
 
-/* line 288, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 .galery .galery--slide-container {
   height: auto;
   background-color: blue;
@@ -435,12 +514,12 @@ body {
   margin-top: -1px;
 }
 
-/* line 296, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .portfolio--container .container {
   width: 100%;
 }
 
-/* line 299, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 .portfolio--navigation {
   width: 50%;
   display: flex;
@@ -450,7 +529,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* line 307, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 .portfolio--head-text {
   width: 80%;
   margin: 0 auto;
@@ -458,7 +537,7 @@ body {
   font-family: Open_Sans_Regular, Arial, sans-serif;
 }
 
-/* line 313, ../sass/screen.scss */
+/* line 377, ../sass/screen.scss */
 .portfolio--header, .testimonials-header {
   color: #709dca;
   font-family: Open_Sans_ExtraBold, Arial, sans-serif;
@@ -466,13 +545,13 @@ body {
   font-size: 1.2em;
 }
 
-/* line 319, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 .portfolio--under-header-image {
   width: 100%;
   height: 20px;
 }
 
-/* line 323, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 .portfolio--navigation--links > a {
   padding: 3px 16px;
   background-color: transparent;
@@ -482,13 +561,13 @@ body {
   color: #062033;
 }
 
-/* line 331, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 .portfolio--navigation--links > a:hover {
   background-color: #709dca;
   color: #fff;
 }
 
-/* line 335, ../sass/screen.scss */
+/* line 399, ../sass/screen.scss */
 .galery--galery-slide {
   height: 283px;
   box-sizing: border-box;
@@ -498,47 +577,47 @@ body {
   margin-left: -1px;
 }
 
-/* line 344, ../sass/screen.scss */
+/* line 408, ../sass/screen.scss */
 .galery--galery-slide.slide1 {
   background-image: url(../images/portfolio/image1.png);
 }
 
-/* line 347, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 .galery--galery-slide.slide2 {
   background-image: url(../images/portfolio/image2.png);
 }
 
-/* line 350, ../sass/screen.scss */
+/* line 414, ../sass/screen.scss */
 .galery--galery-slide.slide3 {
   background-image: url(../images/portfolio/image3.png);
 }
 
-/* line 353, ../sass/screen.scss */
+/* line 417, ../sass/screen.scss */
 .galery--galery-slide.slide4 {
   background-image: url(../images/portfolio/image4.png);
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 .galery--galery-slide.slide5 {
   background-image: url(../images/portfolio/image5.png);
 }
 
-/* line 359, ../sass/screen.scss */
+/* line 423, ../sass/screen.scss */
 .galery--galery-slide.slide6 {
   background-image: url(../images/portfolio/image6.png);
 }
 
-/* line 362, ../sass/screen.scss */
+/* line 426, ../sass/screen.scss */
 .galery--galery-slide.slide7 {
   background-image: url(../images/portfolio/image7.png);
 }
 
-/* line 365, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 .galery--galery-slide.slide8 {
   background-image: url(../images/portfolio/stork.png);
 }
 
-/* line 368, ../sass/screen.scss */
+/* line 432, ../sass/screen.scss */
 .galery--galery-slide--effect {
   width: 100%;
   height: 283px;
@@ -549,13 +628,13 @@ body {
   transition: .4s all ease;
 }
 
-/* line 377, ../sass/screen.scss */
+/* line 441, ../sass/screen.scss */
 .galery--galery-slide:hover ~ .galery--galery-slide--effect, .galery--galery-slide--effect:hover {
   top: 0px;
   cursor: pointer;
 }
 
-/* line 381, ../sass/screen.scss */
+/* line 445, ../sass/screen.scss */
 .galery--galery-slide--effect--img {
   display: block;
   border-radius: 50%;
@@ -566,7 +645,7 @@ body {
   margin: 90px auto 30px;
 }
 
-/* line 390, ../sass/screen.scss */
+/* line 454, ../sass/screen.scss */
 .galery--galery-slide--effect > strong {
   display: block;
   color: #fff;
@@ -574,7 +653,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* line 396, ../sass/screen.scss */
+/* line 460, ../sass/screen.scss */
 .galery--galery-slide--effect > span {
   display: block;
   color: #fff;
@@ -582,14 +661,14 @@ body {
   font-size: .9em;
 }
 
-/* line 402, ../sass/screen.scss */
+/* line 466, ../sass/screen.scss */
 .testimonials {
   background: #fff;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* line 407, ../sass/screen.scss */
+/* line 471, ../sass/screen.scss */
 .testimonials--line {
   display: block;
   width: 220px;
@@ -598,24 +677,24 @@ body {
   margin: 30px auto -12px;
 }
 
-/* line 414, ../sass/screen.scss */
+/* line 478, ../sass/screen.scss */
 .testimonials--content {
   margin-top: 3em;
 }
 
-/* line 417, ../sass/screen.scss */
+/* line 481, ../sass/screen.scss */
 .testimonials--undertitle-icon {
   background: white;
   display: inline-block;
   padding: 0 5px;
 }
 
-/* line 425, ../sass/screen.scss */
+/* line 489, ../sass/screen.scss */
 .testimonials--content--comments {
   text-align: left;
 }
 
-/* line 428, ../sass/screen.scss */
+/* line 492, ../sass/screen.scss */
 .testimonials--content--comments--text-form {
   background: #f6f3f3;
   height: auto;
@@ -629,7 +708,7 @@ body {
   position: relative;
 }
 
-/* line 440, ../sass/screen.scss */
+/* line 504, ../sass/screen.scss */
 .testimonials--content--comments--text-form::after {
   content: "";
   width: 0;
@@ -641,7 +720,7 @@ body {
   left: 50px;
 }
 
-/* line 450, ../sass/screen.scss */
+/* line 514, ../sass/screen.scss */
 .testimonials--content--comments--signature {
   color: #000;
   font-family: Open_Sans_Bold, Arial, sans-serif;
@@ -651,7 +730,7 @@ body {
   margin-left: 10px;
 }
 
-/* line 458, ../sass/screen.scss */
+/* line 522, ../sass/screen.scss */
 .testimonials--content--comments--signature ~ span {
   color: #000;
   font-family: Open_Sans_Regular, Arial, sans-serif;
@@ -659,14 +738,14 @@ body {
   vertical-align: super;
 }
 
-/* line 464, ../sass/screen.scss */
+/* line 528, ../sass/screen.scss */
 .testimonials--content--control {
   display: flex;
   justify-content: center;
   margin-top: 2em;
 }
 
-/* line 469, ../sass/screen.scss */
+/* line 533, ../sass/screen.scss */
 .testimonials--content--control li {
   width: 20px;
   height: 20px;
@@ -676,14 +755,14 @@ body {
   margin: 0 3px;
 }
 
-/* line 477, ../sass/screen.scss */
+/* line 541, ../sass/screen.scss */
 .testimonials--content--control li:hover {
   border-color: #709dca;
   background: transparent;
   cursor: pointer;
 }
 
-/* line 482, ../sass/screen.scss */
+/* line 546, ../sass/screen.scss */
 .footer {
   text-align: left;
   padding: 50px 0;
@@ -694,7 +773,7 @@ body {
   line-height: 17px;
 }
 
-/* line 491, ../sass/screen.scss */
+/* line 555, ../sass/screen.scss */
 .footer-header {
   color: #fff;
   font-family: Open_Sans_Regular, Arial, sans-serif;
@@ -703,14 +782,14 @@ body {
   margin-bottom: 1em;
 }
 
-/* line 498, ../sass/screen.scss */
+/* line 562, ../sass/screen.scss */
 .footer--contact-column--contact-info li {
   color: #fff;
   margin: 5px 0;
   font-size: 1.1em;
 }
 
-/* line 503, ../sass/screen.scss */
+/* line 567, ../sass/screen.scss */
 .footer--contact-column--contact-info span {
   color: #709dca;
   font-size: 1.4em;
@@ -718,12 +797,12 @@ body {
   margin-right: 1em;
 }
 
-/* line 509, ../sass/screen.scss */
+/* line 573, ../sass/screen.scss */
 .footer--contact-column--contact-info {
   margin-top: 1em;
 }
 
-/* line 512, ../sass/screen.scss */
+/* line 576, ../sass/screen.scss */
 i {
   display: block;
   float: left;
@@ -731,12 +810,12 @@ i {
   color: #709dca;
 }
 
-/* line 518, ../sass/screen.scss */
+/* line 582, ../sass/screen.scss */
 .footer--tweets-column--text {
   padding-left: 2em;
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 585, ../sass/screen.scss */
 .footer--tweets-column-tweet > span {
   display: inline-block;
   margin-left: 2em;
@@ -744,12 +823,12 @@ i {
   color: #709dca;
 }
 
-/* line 527, ../sass/screen.scss */
+/* line 591, ../sass/screen.scss */
 .footer--tweets-column-tweet {
   margin-bottom: 1em;
 }
 
-/* line 530, ../sass/screen.scss */
+/* line 594, ../sass/screen.scss */
 .footer--form-column--text-input {
   display: inline-block;
   width: 75%;
@@ -761,7 +840,7 @@ i {
   background: #172227;
 }
 
-/* line 540, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 .footer--form-column--button {
   width: 25%;
   border: 0px;
@@ -772,7 +851,7 @@ i {
   color: #fff;
 }
 
-/* line 549, ../sass/screen.scss */
+/* line 613, ../sass/screen.scss */
 .footer--form-column--form-container {
   display: flex;
   flex-direction: row;
@@ -780,12 +859,12 @@ i {
   margin-top: 1em;
 }
 
-/* line 555, ../sass/screen.scss */
+/* line 619, ../sass/screen.scss */
 .footer-row > div {
   margin-bottom: 2em;
 }
 
-/* line 558, ../sass/screen.scss */
+/* line 622, ../sass/screen.scss */
 .footer--bottom-part {
   text-align: center;
   background: #172227;
@@ -793,7 +872,7 @@ i {
   font-size: .8em;
 }
 
-/* line 564, ../sass/screen.scss */
+/* line 628, ../sass/screen.scss */
 .footer--bottom-part--icon-bg {
   width: 2em;
   height: 2em;
@@ -801,60 +880,110 @@ i {
   background: #2c3b42;
   margin-right: 5px;
 }
-/* line 570, ../sass/screen.scss */
+/* line 634, ../sass/screen.scss */
 .footer--bottom-part--icon-bg i {
   line-height: 25px;
   color: #fff;
 }
 
-/* line 575, ../sass/screen.scss */
+/* line 639, ../sass/screen.scss */
 .footer--bottom-part--icon-bg:hover {
   background: #71b6d5;
   cursor: pointer;
 }
 
-/* line 579, ../sass/screen.scss */
+/* line 643, ../sass/screen.scss */
 .footer--bottom-part--row > p, .footer--bottom-part--row > div {
   padding: 2em 0;
 }
 
-/* line 582, ../sass/screen.scss */
+/* line 646, ../sass/screen.scss */
 .footer--bottom-part--icons {
   display: inline-flex;
   justify-content: flex-end;
 }
 
 @media (max-width: 768px) {
-  /* line 587, ../sass/screen.scss */
+  /* line 651, ../sass/screen.scss */
   .testimonials--line {
     width: 100%;
   }
 
-  /* line 591, ../sass/screen.scss */
+  /* line 655, ../sass/screen.scss */
   .about-us--slider--image-part-images {
     height: 300px;
   }
 }
 @media screen and (max-width: 1280px) {
-  /* line 596, ../sass/screen.scss */
+  /* line 660, ../sass/screen.scss */
   .about-us {
     overflow: visible;
     height: auto;
   }
 }
 @media screen and (max-width: 900px) {
-  /* line 602, ../sass/screen.scss */
+  /* line 666, ../sass/screen.scss */
   .about-us--slider-container {
     flex-direction: column;
   }
 
-  /* line 605, ../sass/screen.scss */
+  /* line 669, ../sass/screen.scss */
   .about-us--slider--image-part-images {
     height: 400px;
   }
 
-  /* line 608, ../sass/screen.scss */
+  /* line 672, ../sass/screen.scss */
   .about-us--slider--content-part, .about-us--slider--image-part {
     width: 100%;
   }
+}
+@media (min-aspect-ratio: 16 / 9) {
+  /* line 677, ../sass/screen.scss */
+  .video-background {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16 / 9) {
+  /* line 684, ../sass/screen.scss */
+  .video-background {
+    width: 300%;
+    left: -100%;
+  }
+}
+@supports (object-fit: cover) {
+  /* line 691, ../sass/screen.scss */
+  .video-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+/* line 699, ../sass/screen.scss */
+.arrows-container {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+
+/* line 704, ../sass/screen.scss */
+.arrow-btn {
+  width: 3em;
+  height: 3em;
+  background: transparent;
+  color: #ffc155;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* line 712, ../sass/screen.scss */
+.prev-arrow {
+  left: 0px;
+}
+
+/* line 715, ../sass/screen.scss */
+.next-arrow {
+  right: 0px;
 }
